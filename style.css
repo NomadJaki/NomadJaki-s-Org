@@ -115,6 +115,59 @@ main {
   padding-top: 0.5rem;
 }
 
+.home-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.sidebar {
+  padding-top: 0.5rem;
+}
+
+.sidebar-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  position: sticky;
+  top: 1.25rem;
+}
+
+.sidebar-card h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem;
+}
+
+.social-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.55rem 0.8rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background: var(--accent-soft);
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background: #ffffff;
+}
+
 section {
   padding: 2.5rem 0;
   border-bottom: 1px solid #e5e7eb;
@@ -254,5 +307,15 @@ textarea:focus {
 @media (max-width: 560px) {
   header {
     align-items: center;
+  }
+}
+
+@media (max-width: 920px) {
+  .home-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-card {
+    position: static;
   }
 }

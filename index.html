@@ -22,42 +22,57 @@
     </details>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>About</h2>
-      <p class="highlight">Hi — I’m Jaki. I’m a student at the University of York. Right now, I'm studying basic computer science knowledge.</p>
-      <p>I’m building skills in HTML, CSS and JavaScript, and I’m using this site to show what I’m working on.</p>
-    </section>
+  <div class="home-layout">
+    <main>
+      <section id="about">
+        <h2>About</h2>
+        <p class="highlight">Hi — I’m Jaki. I’m a student at the University of York. Right now, I'm studying basic computer science knowledge.</p>
+        <p>I’m building skills in HTML, CSS and JavaScript, and I’m using this site to show what I’m working on.</p>
+      </section>
 
-    <section id="personal-details">
-      <h2>Personal details</h2>
-      <p class="highlight">Out of work, additional details about my background are available upon request.</p>
-      <p>Trilingual in Chinese, Japanese, and English.</p>
-      <p>Beyond my Computer Science expertise, I have experience in digital illustration (e.g., Photoshop, Illustrator) and architectural drafting.</p>
-    </section>
+      <section id="personal-details">
+        <h2>Personal details</h2>
+        <p class="highlight">Out of work, additional details about my background are available upon request.</p>
+        <p>Trilingual in Chinese, Japanese, and English.</p>
+        <p>Beyond my Computer Science expertise, I have experience in digital illustration (e.g., Photoshop, Illustrator) and architectural drafting.</p>
+      </section>
 
-    <section id="contact">
-      <h2>Get In Touch</h2>
-      <p>If you want to collaborate or have feedback, send me a message.</p>
+      <section id="contact">
+        <h2>Get In Touch</h2>
+        <p>If you want to collaborate or have feedback, send me a message.</p>
 
-      <form id="contact-form">
-        <div>
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" required placeholder="Jane Smith" />
-        </div>
-        <div>
-          <label for="email">Your Email</label>
-          <input type="email" id="email" name="email" required placeholder="jane@example.com" />
-        </div>
-        <div>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required placeholder="Say hello..." rows="5"></textarea>
-        </div>
-        <button class="button" type="submit" id="submit-btn">Send Message</button>
-        <p id="form-status" role="status" aria-live="polite"></p>
-      </form>
-    </section>
-  </main>
+        <form id="contact-form">
+          <div>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="Jane Smith" />
+          </div>
+          <div>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required placeholder="jane@example.com" />
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Say hello..." rows="5"></textarea>
+          </div>
+          <button class="button" type="submit" id="submit-btn">Send Message</button>
+          <p id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <aside class="sidebar" aria-label="Social links">
+      <div class="sidebar-card">
+        <h2>Find me also on:</h2>
+        <ul class="social-list">
+          <li>
+            <a class="social-link" href="https://www.instagram.com/jaki_s05_/" target="_blank" rel="noopener noreferrer">
+              Instagram
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </div>
 </div>
 
 <script>
