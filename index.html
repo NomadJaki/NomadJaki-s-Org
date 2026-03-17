@@ -1,131 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jaki — Portfolio</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="page-wrap">
-  <header>
-    <div class="site-title">Jaki</div>
-    <details class="menu">
-      <summary class="menu-button">Menu</summary>
-      <nav class="menu-panel" aria-label="Site">
-        <ul>
-          <li><a class="active" href="index.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="https://github.com/NomadJaki" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        </ul>
-      </nav>
-    </details>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jaki — Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <div class="home-layout">
-    <main>
-      <section id="about">
-        <h2>About</h2>
-        <p class="highlight">Hi — I’m Jaki. I’m a student at the University of York. Right now, I'm studying basic computer science knowledge.</p>
-        <p>I’m building skills in HTML, CSS and JavaScript, and I’m using this site to show what I’m working on.</p>
-      </section>
+  <body>
+    <div class="page-wrap">
+      <header>
+        <div class="site-title">Jaki</div>
 
-      <section id="personal-details">
-        <h2>Personal details</h2>
-        <p class="highlight">Out of work, additional details about my background are available upon request.</p>
-        <p>Trilingual in Chinese, Japanese, and English.</p>
-        <p>Beyond my Computer Science expertise, I have experience in digital illustration (e.g., Photoshop, Illustrator) and architectural drafting.</p>
-      </section>
+        <details class="menu">
+          <summary class="menu-button">Menu</summary>
+          <nav class="menu-panel" aria-label="Site">
+            <ul>
+              <li><a class="active" href="index.html">About</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li>
+                <a href="https://github.com/NomadJaki" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </li>
+            </ul>
+          </nav>
+        </details>
+      </header>
 
-      <section id="contact">
-        <h2>Get In Touch</h2>
-        <p>If you want to collaborate or have feedback, send me a message.</p>
+      <div class="home-layout">
+        <main>
+          <section id="about">
+            <h2>About</h2>
+            <p class="highlight">
+              Hi — I’m Jaki. I’m a student at the University of York. Right now, I'm studying basic computer
+              science knowledge.
+            </p>
+            <p>
+              I’m building skills in HTML, CSS and JavaScript, and I’m using this site to show what I’m
+              working on.
+            </p>
+          </section>
 
-        <form id="contact-form">
-          <div>
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required placeholder="Jane Smith" />
+          <section id="personal-details">
+            <h2>Personal details</h2>
+            <p class="highlight">Out of work, additional details about my background are available upon request.</p>
+            <p>Trilingual in Chinese, Japanese, and English.</p>
+            <p>
+              Beyond my Computer Science expertise, I have experience in digital illustration (e.g.,
+              Photoshop, Illustrator) and architectural drafting.
+            </p>
+          </section>
+
+          <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>If you want to collaborate or have feedback, send me a message.</p>
+
+            <form id="contact-form">
+              <div>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="Jane Smith" />
+              </div>
+
+              <div>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required placeholder="jane@example.com" />
+              </div>
+
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required placeholder="Say hello..." rows="5"></textarea>
+              </div>
+
+              <button class="button" type="submit" id="submit-btn">Send Message</button>
+              <p id="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </section>
+        </main>
+
+        <aside class="sidebar" aria-label="Social links">
+          <div class="sidebar-card">
+            <h2>Find me also on:</h2>
+            <ul class="social-list">
+              <li>
+                <a
+                  class="social-link"
+                  href="https://www.instagram.com/jaki_s05_/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
+              </li>
+            </ul>
           </div>
-          <div>
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required placeholder="jane@example.com" />
-          </div>
-          <div>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required placeholder="Say hello..." rows="5"></textarea>
-          </div>
-          <button class="button" type="submit" id="submit-btn">Send Message</button>
-          <p id="form-status" role="status" aria-live="polite"></p>
-        </form>
-      </section>
-    </main>
-
-    <aside class="sidebar" aria-label="Social links">
-      <div class="sidebar-card">
-        <h2>Find me also on:</h2>
-        <ul class="social-list">
-          <li>
-            <a class="social-link" href="https://www.instagram.com/jaki_s05_/" target="_blank" rel="noopener noreferrer">
-              Instagram
-            </a>
-          </li>
-        </ul>
+        </aside>
       </div>
-    </aside>
-  </div>
-</div>
+    </div>
 
-<script>
-  // ── Supabase config ─────────────────────────────────────────────
-  // Replace these two values with YOUR project URL and anon key
-  const SUPABASE_URL = "https://keebqlpioucdyfisvrtm.supabase.co";
-  const SUPABASE_ANON = "sb_publishable_1OMQjJQpBuylD8WJ68T0ow_FKjvNKRh";
+    <script>
+      // ── Supabase config ─────────────────────────────────────────────
+      // Replace these two values with YOUR project URL and anon key
+      const SUPABASE_URL = "https://keebqlpioucdyfisvrtm.supabase.co";
+      const SUPABASE_ANON = "sb_publishable_1OMQjJQpBuylD8WJ68T0ow_FKjvNKRh";
 
-  // ── Form submission handler ──────────────────────────────────────
-  document.getElementById("contact-form").addEventListener("submit", async function (event) {
-    event.preventDefault();
+      // ── Form submission handler ──────────────────────────────────────
+      document.getElementById("contact-form").addEventListener("submit", async function (event) {
+        event.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-    const btn = document.getElementById("submit-btn");
-    const status = document.getElementById("form-status");
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+        const btn = document.getElementById("submit-btn");
+        const status = document.getElementById("form-status");
 
-    btn.disabled = true;
-    btn.textContent = "Sending...";
-    status.textContent = "";
+        btn.disabled = true;
+        btn.textContent = "Sending...";
+        status.textContent = "";
 
-    try {
-      const response = await fetch(`${SUPABASE_URL}/rest/v1/contact_messages`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          apikey: SUPABASE_ANON,
-          Authorization: `Bearer ${SUPABASE_ANON}`,
-          Prefer: "return=minimal",
-        },
-        body: JSON.stringify({ name, email, message }),
+        try {
+          const response = await fetch(`${SUPABASE_URL}/rest/v1/contact_messages`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              apikey: SUPABASE_ANON,
+              Authorization: `Bearer ${SUPABASE_ANON}`,
+              Prefer: "return=minimal",
+            },
+            body: JSON.stringify({ name, email, message }),
+          });
+
+          if (response.ok) {
+            status.textContent = "✓ Message sent! I will be in touch soon.";
+            status.style.color = "#1A7A4A";
+            event.target.reset();
+          } else {
+            const err = await response.json();
+            console.error("Supabase error:", err);
+            status.textContent = "Something went wrong. Please try again.";
+            status.style.color = "#DC2626";
+          }
+        } catch (networkError) {
+          console.error("Network error:", networkError);
+          status.textContent = "Could not connect. Check your internet connection.";
+          status.style.color = "#DC2626";
+        } finally {
+          btn.disabled = false;
+          btn.textContent = "Send Message";
+        }
       });
-
-      if (response.ok) {
-        status.textContent = "✓ Message sent! I will be in touch soon.";
-        status.style.color = "#1A7A4A";
-        event.target.reset();
-      } else {
-        const err = await response.json();
-        console.error("Supabase error:", err);
-        status.textContent = "Something went wrong. Please try again.";
-        status.style.color = "#DC2626";
-      }
-    } catch (networkError) {
-      console.error("Network error:", networkError);
-      status.textContent = "Could not connect. Check your internet connection.";
-      status.style.color = "#DC2626";
-    } finally {
-      btn.disabled = false;
-      btn.textContent = "Send Message";
-    }
-  });
-</script>
-</body>
+    </script>
+  </body>
 </html>
