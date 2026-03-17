@@ -1,258 +1,49 @@
-:root {
-  --bg: #f5f5f7; /* page background */
-  --text: #111827; /* main body text */
-  --accent: #2563eb; /* buttons, links, borders */
-  --accent-soft: #dbeafe; /* subtle panel background */
-  --font-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaki — Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-wrap">
+    <header>
+      <div class="site-title">Jaki</div>
+      <details class="menu">
+        <summary class="menu-button">Menu</summary>
+        <nav class="menu-panel" aria-label="Site">
+          <ul>
+            <li><a href="index.html">About</a></li>
+            <li><a class="active" href="projects.html">Projects</a></li>
+            <li><a href="https://github.com/NomadJaki" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          </ul>
+        </nav>
+      </details>
+    </header>
 
-* {
-  box-sizing: border-box;
-}
+    <main>
+      <section id="projects">
+        <h2>Projects</h2>
+        <p>Here are a few things I’ve made (I’ll keep adding more as I learn).</p>
+        <p>
+          <a class="button" href="https://github.com/NomadJaki" target="_blank" rel="noopener noreferrer">
+            View my GitHub
+          </a>
+        </p>
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-base);
-  color: var(--text);
-  background: var(--bg);
-  line-height: 1.6;
-}
-
-.page-wrap {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
-}
-
-header {
-  padding: 1.5rem 0 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #e5e7eb;
-  gap: 1rem;
-}
-
-.site-title {
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-}
-
-.menu {
-  position: relative;
-}
-
-.menu-button {
-  list-style: none;
-  user-select: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 0.9rem;
-  border-radius: 999px;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  cursor: pointer;
-  font-size: 0.95rem;
-}
-
-.menu-button::-webkit-details-marker {
-  display: none;
-}
-
-.menu[open] .menu-button {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px var(--accent-soft);
-}
-
-.menu-panel {
-  position: absolute;
-  right: 0;
-  top: calc(100% + 0.6rem);
-  min-width: 220px;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.75rem;
-  padding: 0.5rem;
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
-  z-index: 10;
-}
-
-.menu-panel ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.menu-panel a {
-  display: block;
-  text-decoration: none;
-  color: var(--text);
-  font-size: 0.95rem;
-  padding: 0.55rem 0.7rem;
-  border-radius: 0.6rem;
-  transition: background 0.2s, color 0.2s;
-}
-
-.menu-panel a:hover,
-.menu-panel a:focus {
-  background: var(--accent-soft);
-  color: var(--accent);
-}
-
-.menu-panel a.active {
-  background: var(--accent-soft);
-  color: var(--accent);
-  font-weight: 600;
-}
-
-main {
-  padding-top: 0.5rem;
-}
-
-section {
-  padding: 2.5rem 0;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-section:last-of-type {
-  border-bottom: none;
-}
-
-section h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0.75rem;
-}
-
-section p {
-  max-width: 60ch;
-  margin-bottom: 0.75rem;
-}
-
-.highlight {
-  background: var(--accent-soft);
-  border-left: 4px solid var(--accent);
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
-  margin-top: 1rem;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.project-card {
-  background: #ffffff;
-  border-radius: 0.75rem;
-  padding: 1.25rem;
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
-  border: 1px solid #e5e7eb;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.project-card h3 {
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-.project-card p {
-  margin: 0;
-  font-size: 0.95rem;
-}
-
-.project-meta {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #6b7280;
-}
-
-.project-links {
-  margin-top: 0.5rem;
-}
-
-.project-links a {
-  font-size: 0.9rem;
-  color: var(--accent);
-  text-decoration: none;
-  margin-right: 0.75rem;
-}
-
-.project-links a:hover {
-  text-decoration: underline;
-}
-
-.button,
-button.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.6rem 1.3rem;
-  border-radius: 999px;
-  background: var(--accent);
-  color: #ffffff;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-}
-
-.button:disabled,
-button.button:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-
-form {
-  margin-top: 1rem;
-  max-width: 720px;
-}
-
-form > div {
-  margin-bottom: 0.9rem;
-}
-
-label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.35rem;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 0.7rem 0.9rem;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.6rem;
-  font: inherit;
-  background: #ffffff;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px var(--accent-soft);
-}
-
-#form-status {
-  margin-top: 0.75rem;
-  min-height: 1.2em;
-}
-
-@media (max-width: 560px) {
-  header {
-    align-items: center;
-  }
-}
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-meta">Web Page · 2026</div>
+            <h3>Portfolio Website</h3>
+            <p>A simple responsive portfolio with a styled layout and contact form.</p>
+            <div class="project-links">
+              <a href="https://github.com/NomadJaki" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
